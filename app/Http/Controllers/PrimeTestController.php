@@ -13,7 +13,7 @@ class PrimeTestController extends Controller
      */
     public function index()
     {
-        $guzzle = GuzzleApi::test2();
+        $guzzle = GuzzleApi::test1();
         dd($guzzle);
     }
 

@@ -24,7 +24,7 @@ class GuzzleApi
             'x-apihub-endpoint' => '068a5941-4f63-4db1-a04d-efbbe5ed833b'
          ];
 
-        $response = $client->request('GET', 'https://Faker-API.proxy-production.allthingsdev.co/api/v2/creditCards?_quantity=3', ['headers' => $headers]);
+        $response = $client->request('GET', env('API_TEST',''), ['headers' => $headers]);
 
         if($response->getStatusCode() == 200){
             $body = $response->getBody()->getContents();
